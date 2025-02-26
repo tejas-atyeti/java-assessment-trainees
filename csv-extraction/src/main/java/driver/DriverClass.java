@@ -1,4 +1,4 @@
-package main.java;
+package driver;
 
 import main.java.pojo.Customer;
 import main.java.util.CsvExtractor;
@@ -10,7 +10,7 @@ public class DriverClass {
         CsvExtractor csvExtractor = new CsvExtractor();
 
         // Reading the CSV file and converting it into Customer objects
-        List<Customer> customers = csvExtractor.readCSV("src/main/resources/customers.csv");
+        List<Customer> customers = csvExtractor.readCSV("csv-extraction/src/main/resources/customers.csv");
 
         // Printing out the Customer objects
         System.out.println("Customers Read from CSV:");

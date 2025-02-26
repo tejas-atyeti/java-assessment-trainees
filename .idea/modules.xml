@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/csv-extraction/csv-extraction.iml" filepath="$PROJECT_DIR$/csv-extraction/csv-extraction.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-assessment-trainees.iml" filepath="$PROJECT_DIR$/java-assessment-trainees.iml" />
     </modules>
   </component>
