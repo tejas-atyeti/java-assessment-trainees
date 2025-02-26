@@ -1,4 +1,4 @@
-import main.java.pojo.Customer;
+import pojo.Customer;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;

@@ -1,6 +1,7 @@
-package main.java.util;
+package util;
 
-import main.java.pojo.Customer;
+
+import pojo.Customer;
 
 import java.io.*;
 import java.nio.file.Files;
