@@ -16,6 +16,12 @@ public class Customer implements Serializable {
     @CsvBindByName
     private String email;
 
+    public Customer(String name, int age, String email) {
+        this.name = name;
+        this.age = age;
+        this.email = email;
+    }
+
     // Constructor
     public Customer() {}
 
