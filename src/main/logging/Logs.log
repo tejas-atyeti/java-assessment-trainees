@@ -1,0 +1,10 @@
+Feb 27, 2025 9:19:07 PM main.logging.LoggerFile logInfo
+INFO: ERR004: Error reading sensor data - src\main\dataingestion\datautils\sensor_data.csv (The system cannot find the path specified)
+Feb 27, 2025 9:19:07 PM main.logging.LoggerFile logInfo
+INFO: ✅ Loaded 0 sensor data records.
+Feb 27, 2025 9:19:07 PM main.logging.LoggerFile logInfo
+INFO: ERR008: Error reading threshold data - src\main\dataingestion\datautils\thresholds.csv (The system cannot find the path specified)
+Feb 27, 2025 9:19:07 PM main.logging.LoggerFile logInfo
+INFO: Loaded 0 threshold records.
+Feb 27, 2025 9:19:07 PM main.logging.LoggerFile logInfo
+INFO: No sensor data found. Exiting...
