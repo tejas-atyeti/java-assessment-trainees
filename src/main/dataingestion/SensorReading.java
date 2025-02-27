@@ -42,7 +42,9 @@ public class SensorReading {
     }
 
     public double getValue() { return value; }
-    public String getSensorType() { return sensorType; }
+    public String getSensorType() {
+        return sensorType;
+    }
 
     @Override
     public String toString() {
