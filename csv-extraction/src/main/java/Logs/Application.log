@@ -24,3 +24,41 @@ Feb 27, 2025 5:48:51 PM util.LoggerUtil logInfo
 INFO: Outliers written to C:\Users\SumitRanaware\OneDrive - Atyeti Inc\Desktop\CoreJavaAssesment\java-assessment-trainees\csv-extraction\src\main\java\Database\detected_outliers.csv
 Feb 27, 2025 5:48:51 PM util.LoggerUtil logInfo
 INFO: Processing complete.
+Feb 27, 2025 7:35:47 PM util.LoggerUtil logWarning
+WARNING: Error reading sensor data
+Feb 27, 2025 7:35:47 PM util.LoggerUtil logWarning
+WARNING: Error reading thresholds
+Feb 27, 2025 7:35:47 PM util.LoggerUtil logInfo
+INFO: Monthly statistics written to C:\Users\SumitRanaware\OneDrive - Atyeti Inc\Desktop\CoreJavaAssesment\java-assessment-trainees\csv-extraction\src\main\java\Database\monthly_records_statistics.csv
+Feb 27, 2025 7:35:47 PM util.LoggerUtil logInfo
+INFO: Outliers written to C:\Users\SumitRanaware\OneDrive - Atyeti Inc\Desktop\CoreJavaAssesment\java-assessment-trainees\csv-extraction\src\main\java\Database\detected_outliers.csv
+Feb 27, 2025 7:35:47 PM util.LoggerUtil logInfo
+INFO: Processing complete.
+Feb 27, 2025 7:43:17 PM util.LoggerUtil logInfo
+INFO: Skipping invalid line 
+Feb 27, 2025 7:43:17 PM util.LoggerUtil logInfo
+INFO: Skipping invalid line 
+Feb 27, 2025 7:43:17 PM util.LoggerUtil logInfo
+INFO: Skipping invalid line 
+Feb 27, 2025 7:43:17 PM util.LoggerUtil logInfo
+INFO: Skipping invalid line 
+Feb 27, 2025 7:43:17 PM util.LoggerUtil logInfo
+INFO: Monthly statistics written to C:\Users\SumitRanaware\OneDrive - Atyeti Inc\Desktop\CoreJavaAssesment\java-assessment-trainees\csv-extraction\src\main\java\Database\monthly_records_statistics.csv
+Feb 27, 2025 7:43:17 PM util.LoggerUtil logInfo
+INFO: Outliers written to C:\Users\SumitRanaware\OneDrive - Atyeti Inc\Desktop\CoreJavaAssesment\java-assessment-trainees\csv-extraction\src\main\java\Database\detected_outliers.csv
+Feb 27, 2025 7:43:17 PM util.LoggerUtil logInfo
+INFO: Processing complete.
+Feb 27, 2025 7:44:05 PM util.LoggerUtil logInfo
+INFO: Skipping invalid line 
+Feb 27, 2025 7:44:05 PM util.LoggerUtil logInfo
+INFO: Skipping invalid line 
+Feb 27, 2025 7:44:05 PM util.LoggerUtil logInfo
+INFO: Skipping invalid line 
+Feb 27, 2025 7:44:05 PM util.LoggerUtil logInfo
+INFO: Skipping invalid line 
+Feb 27, 2025 7:44:05 PM util.LoggerUtil logInfo
+INFO: Monthly statistics written to C:\Users\SumitRanaware\OneDrive - Atyeti Inc\Desktop\CoreJavaAssesment\java-assessment-trainees\csv-extraction\src\main\java\Database\monthly_records_statistics.csv
+Feb 27, 2025 7:44:05 PM util.LoggerUtil logInfo
+INFO: Outliers written to C:\Users\SumitRanaware\OneDrive - Atyeti Inc\Desktop\CoreJavaAssesment\java-assessment-trainees\csv-extraction\src\main\java\Database\detected_outliers.csv
+Feb 27, 2025 7:44:05 PM util.LoggerUtil logInfo
+INFO: Processing complete.

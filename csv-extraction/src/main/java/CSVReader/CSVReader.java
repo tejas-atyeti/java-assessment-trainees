@@ -29,7 +29,6 @@ public class CSVReader {
                     .map(line -> line.split(","))
                     .filter(parts -> {
                         if (parts.length != 6) {
-                            System.out.println("Skipping invalid line " + String.join(",", parts));
                             LoggerUtil.logInfo("Skipping invalid line ");
                             return false;
                         }
