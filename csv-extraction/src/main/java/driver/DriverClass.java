@@ -1,50 +1,46 @@
 package driver;
 
 
-import com.opencsv.CSVReader;
+import com.opencsv.bean.CsvToBean;
+import com.opencsv.bean.CsvToBeanBuilder;
+import pojo.Customer;
 
 import java.io.FileReader;
+import java.io.IOException;
+import java.util.List;
 
 public class DriverClass {
-    public static void main(String[] args) {
+
+    public List<Customer> readCSV(String fileName) {
+        List<Customer> customers = null;
         try {
+            // Create a FileReader object to read the CSV file
+            FileReader reader = new FileReader(fileName);
 
-            // Create an object of filereader
-            // class with CSV file as a parameter.
-            String filename = "csv-extraction/src/main/resources/customers.csv";
-            FileReader filereader = new FileReader(filename);
+            // Use OpenCSV CsvToBeanBuilder to convert CSV into Java objects
+            CsvToBean<Customer> csvToBean = new CsvToBeanBuilder<Customer>(reader)
+                    .withType(Customer.class)         // Define POJO type (Customer)
+                    .withIgnoreLeadingWhiteSpace(true) // Ignore leading whitespace
+                    .build();
 
-            // create csvReader object passing
-            // file reader as a parameter
-            CSVReader csvReader = new CSVReader(filereader);
-            String[] nextRecord;
+            // Parse the CSV data into a List of Customer objects
+            customers = csvToBean.parse();
+        } catch (IOException e) {
+            System.err.println("Error reading CSV file: " + e.getMessage());
+        }
+        return customers;
+    }
 
-            while ((nextRecord = csvReader.readNext()) != null) {
-                for (String cell : nextRecord) {
-                    System.out.print(cell + "\t");
-                }
-                System.out.println();
+    public static void main(String[] args) {
+        DriverClass driverClass = new DriverClass();
+        List<Customer> customers = driverClass.readCSV("csv-extraction/src/main/resources/customers.csv");
+
+        if (customers != null) {
+            System.out.println("Customers Read from CSV:");
+            // Print the list of customers
+            for (Customer customer : customers) {
+                System.out.println(customer);
             }
         }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-
-            // Reading the CSV file and converting it into Customer objects
-//        List<Customer> customers = csvExtractor.readCSV("csv-extraction/src/main/resources/customers.csv");
-//
-//        // Printing out the Customer objects
-//        System.out.println("Customers Read from CSV:");
-//        customers.forEach(System.out::println);
-//
-//        // Serializing the list of Customer objects to a file
-//        csvExtractor.serializeCustomers(customers, "customers.ser");
-//
-//        // Deserializing the list of Customer objects back from the file
-//        List<Customer> deserializedCustomers = csvExtractor.deserializeCustomers("customers.ser");
-//
-//        // Printing out the deserialized Customer objects
-//        System.out.println("\nDeserialized Customers:");
-//        deserializedCustomers.forEach(System.out::println);
     }
 }

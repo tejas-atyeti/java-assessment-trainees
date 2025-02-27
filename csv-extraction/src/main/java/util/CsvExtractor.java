@@ -23,7 +23,7 @@ public class CsvExtractor {
                     int age = Integer.parseInt(fields[1]);
                     String email = fields[2];
 
-                    Customer customer = new Customer(name, age, email);
+                    Customer customer = new Customer();
                     customers.add(customer);
                 }
             }

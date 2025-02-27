@@ -1,22 +1,25 @@
 package pojo;
 
+import com.opencsv.bean.CsvBindByName;
+
 import java.io.Serializable;
 
 public class Customer implements Serializable {
     private static final long serialVersionUID = 1L;
 
+    @CsvBindByName
     private String name;
+
+    @CsvBindByName
     private int age;
+
+    @CsvBindByName
     private String email;
 
     // Constructor
-    public Customer(String name, int age, String email) {
-        this.name = name;
-        this.age = age;
-        this.email = email;
-    }
+    public Customer() {}
 
-    // Getters and setters
+    // Getters and Setters
     public String getName() {
         return name;
     }
@@ -41,7 +44,6 @@ public class Customer implements Serializable {
         this.email = email;
     }
 
-    // ToString method for easy printing
     @Override
     public String toString() {
         return "Customer{name='" + name + "', age=" + age + ", email='" + email + "'}";

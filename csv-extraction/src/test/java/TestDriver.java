@@ -7,7 +7,7 @@ public class TestDriver {
 
     @Test
     public void testDriverClass() {
-        Customer customer = new Customer("Claudia", 24, "clau24@gmail.com");
+        Customer customer = new Customer();
         assertNotNull(customer);
     }
 }
