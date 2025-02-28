@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Project coordinates (Group ID, Artifact ID, Version) -->
+    <artifactId>csv-extraction</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>CSV Reader Project</name>
+    <description>A Java project for reading and parsing CSV data and performing serialization.</description>
+    <url>http://www.example.com</url>
+
+        <!-- Parent POM (optional) -->
+        <parent>
+            <groupId>com.example</groupId>
+            <artifactId>csv-reader-project</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </parent>
+
+    <!-- Build Plugins -->
+    <build>
+        <plugins>
+            <!-- Compiler Plugin: To specify the Java version to compile with -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source> <!-- Java version -->
+                    <target>1.8</target> <!-- Java version -->
+                </configuration>
+            </plugin>
+
+            <!-- Shade Plugin: For creating a "fat" jar (optional, if you want to bundle dependencies into a single JAR) -->
+            <!--            <plugin>-->
+            <!--                <groupId>org.apache.maven.plugins</groupId>-->
+            <!--                <artifactId>maven-shade-plugin</artifactId>-->
+            <!--                <version>3.2.1</version>-->
+            <!--                <executions>-->
+            <!--                    <execution>-->
+            <!--                        <phase>package</phase>-->
+            <!--                        <goals>-->
+            <!--                            <goal>shade</goal>-->
+            <!--                        </goals>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--            </plugin>-->
+        </plugins>
+    </build>
+
+    <!-- Dependencies -->
+    <dependencies>
+        <!-- Java IO and Serialization (built into JDK, no dependency required) -->
+
+        <dependency>
+            <groupId>com.opencsv</groupId>
+            <artifactId>opencsv</artifactId>
+            <version>5.9</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>RELEASE</version>
+<!--            <scope>compile</scope>-->
+        </dependency>
+
+
+    </dependencies>
+
+    <!-- Repositories (if you want to add external repositories, optional) -->
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+    </repositories>
+
+    <!-- Properties (optional, for Maven versioning and configuration) -->
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+</project>

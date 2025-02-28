@@ -1,2 +1,1 @@
-# java-assessment-trainees
-Repository for assessment of Java programming for trainees
+Repository for adding assessment solution code for Java.
