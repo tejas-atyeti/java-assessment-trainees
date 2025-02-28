@@ -20,7 +20,7 @@ import java.util.Map;
 public class Main {
 
     public static void main(String[] args) {
-        // Load com.sensor data and thresholds
+        // Load sensor data and thresholds
         List<SensorData> sensorData = loadSensorData("src/main/resources/sensor_data.csv");
         List<ThresholdData> thresholds = loadThresholds("src/main/resources/thresholds.csv");
 
@@ -46,21 +46,26 @@ public class Main {
 
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
+            int rowNumber = 0;
             reader.readLine(); // Skip header
             while ((line = reader.readLine()) != null) {
-                String[] parts = line.split(",");
-                LocalDateTime date = LocalDateTime.parse(parts[0], formatter);
-                String sensorType = parts[1];
-                double value = Double.parseDouble(parts[2]);
-                String unit = parts[3];
-                String locationId = parts[4];
-                String month = parts[5]; // Extract month field
-                sensorData.add(new SensorData(date, sensorType, value, unit, locationId, month));
+                rowNumber++;
+                try {
+                    String[] parts = line.split(",");
+                    LocalDateTime date = LocalDateTime.parse(parts[0], formatter);
+                    String sensorType = parts[1];
+                    double value = Double.parseDouble(parts[2]);
+                    String unit = parts[3];
+                    String locationId = parts[4];
+                    String month = parts[5];
+                    sensorData.add(new SensorData(date, sensorType, value, unit, locationId, month));
+                } catch (Exception e) {
+                    ErrorHandler.handleError(Constants.ERR_CODE_INVALID_FORMAT,
+                            "Invalid data format in row " + rowNumber + ": " + line);
+                }
             }
         } catch (IOException e) {
             ErrorHandler.handleError(Constants.ERR_CODE_FILE_NOT_FOUND, "File not found: " + filePath);
-        } catch (Exception e) {
-            ErrorHandler.handleError(Constants.ERR_CODE_INVALID_FORMAT, "Invalid data format in file: " + filePath);
         }
 
         return sensorData;
